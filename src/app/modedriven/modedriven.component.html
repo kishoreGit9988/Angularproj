@@ -1,0 +1,25 @@
+<form [formGroup]="modelForm" (ngSubmit)='myModel()'>
+    <div>
+        <label for="">User Name</label> <br>
+        <input type="text" fromControlName="username">
+        <br>
+
+    </div>
+    <div>
+        <label for="">age</label> <br>
+        <input type="text" fromControlName="age">
+    </div>
+
+    <div formArrayName="mobiles">
+        <div *ngFor="let ele of modelForm.get('mobiles') ['controls'];let i=index">
+            <label for="">Mobile Number {{i}}</label> <br>
+            <input type="text" name="mobileNumber" formControlName="{{i}}"> &nbsp; <button type="button"
+                (click)='remove(i)'>x</button>
+
+
+        </div>
+    </div>
+
+
+    <button type="submit">Submit</button> | <button type="button" (click)="addingEle()">Add</button>
+</form>

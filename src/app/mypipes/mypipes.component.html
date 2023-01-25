@@ -1,0 +1,47 @@
+<div style="font-weight:bold">1) uppercase & lowercase pipes</div>
+<div>uppercase pipe ==> <b>{{user.name|uppercase}}</b></div> 
+<div>lowercase pipe ==> <b>{{user.name|lowercase}}</b></div>
+<hr>
+
+<div style="font-weight:bold">2)  date pipes</div>
+<div>date pipe ==> <b>{{today|date}}</b></div>
+
+<hr>
+<div style="font-weight:bold">3)  parameterised date pipes</div>
+<div>date pipe ==> <b>{{today|date:'full'}}</b></div>
+<div>date pipe ==> <b>{{today|date:'medium'}}</b></div>
+<div>date pipe ==> <b>{{today|date:'short'}}</b></div>
+
+<hr>
+
+<div style="font-weight:bold">4)  Percentage pipes</div>
+<div>Percentage pipe ==> <b>{{user.salary|percent}}</b></div>
+
+<hr>
+
+<div style="font-weight:bold">5)  currency pipes</div>
+<div>currency pipe ==> <b>{{user.salary|currency}}</b></div>
+<div>currency pipe ==> <b>{{user.salary|currency:'INR'}}</b></div>
+<div>currency pipe ==> <b>{{user.salary|currency:'INR':'code'}}</b></div>
+
+<hr>
+
+<div style="font-weight:bold">6)  json pipes</div>
+
+<div>json pipe ==> <b>{{user|json}}</b></div>
+
+<hr>
+
+<div style="font-weight:bold">7)  async pipes</div>
+
+<div>Without async pipe ==> <b>{{appStatus}}</b></div>
+
+<div>With async pipe ==> <b>{{appStatus|async}}</b></div>
+
+<hr>
+
+<div style="font-weight:bold">8)  Custom pipes</div>
+
+<div>custom pipe ==> <b>{{user.city|mypipe}}</b></div>
+
+

@@ -1,0 +1,36 @@
+<h2>Template Driven Forms</h2>
+
+
+<form #myForm="ngForm" (ngSubmit)="myFormData(myForm)">
+    <div>
+        <label for="">User Name</label> <br>
+        <input type="text" name="username" #f="ngModel" [(ngModel)]="userFormData2.username" required minlength="6">
+        <br>
+        <div *ngIf="f.errors && (f.invalid || f.touched)">
+            <small *ngIf="f.errors['required']">*f is required</small>
+            <small *ngIf="f.errors['minlength']">*f should be more than 6 letters</small>
+        </div>
+    </div>
+    <div>
+        <label for="">age</label> <br>
+        <input type="text" name="age" [(ngModel)]="userFormData.age">
+    </div>
+    <div>
+        <label for="">Phone Number</label> <br>
+        <input type="text" name="phone" [(ngModel)]="userFormData.phone">
+    </div>
+    <div>
+        <label for="">Street</label> <br>
+        <input type="text" name="street" [(ngModel)]="userFormData.street">
+    </div>
+    <div>
+        <label for="">Gender</label> <br>
+        <input type="radio" name="gender" checked>Male
+        <input type="radio" name="gender">Female
+
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div>{{myForm.value|json}}</div>

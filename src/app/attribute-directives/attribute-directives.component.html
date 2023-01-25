@@ -1,0 +1,16 @@
+<h4>ngStyle Examples  </h4>
+
+<div>ng style inline styles with <b>=></b>  <span style="font-weight:900" [ngStyle]="{'color':'red'}"> 'color' : 'red' </span></div>
+<div>ng style inline styles with <b>=></b> <span style="font-weight:900" [ngStyle]="{'color':customColor}"> 'color':customColor </span></div>
+<div>ng style from class file on condition  <b>=></b> <span style="font-weight:900" [ngStyle]="{'color':myColor?'blue':'green'}"> 'color':myColor?'blue':'green' </span>  </div>
+
+
+
+<h4>ngClass Examples</h4>
+
+<div>ng class syntax when we took class name directly from CSS file <b>=></b>  <span  [ngClass]="'c1'" >  [ngClass]="'c1'" </span></div>
+<div>ng class syntax when we took class name from its .ts file <b>=></b> <span  [ngClass]="myc2"> [ngClass]="myc2" </span></div>
+<div>ng class syntax with array braces <b>=></b> <span  [ngClass]="['c2','c1']" > [ngClass]="['c1','c2']" </span>  </div>
+<div>ng class syntax with object notation <b>=></b> <span  [ngClass]="{'c1':true,'c2':false}" > 'c1':true,'c2':false with in the curly braces</span>  </div>
+
+

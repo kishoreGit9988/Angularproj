@@ -1,0 +1,12 @@
+table,th,td{
+    border:1px solid;
+    border-collapse: collapse;
+}
+
+tr:nth-child(ODD){
+    background-color:aquamarine;
+}
+
+tr:nth-child(even){
+    background-color: aqua;
+}

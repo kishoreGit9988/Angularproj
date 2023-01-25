@@ -1,0 +1,14 @@
+<h4 style="color:green">Parent Component</h4>
+
+<p>parent works!</p>
+
+<input type="text" [(ngModel)]="fromInput">
+
+<button type="text" (click)="toMyChild()" >Msg to Child</button>
+
+
+<h4>{{childData}}</h4>
+
+<h4 style="color:green">Child Component</h4>
+
+<app-child [parentMsg]="toChild" (fromChild)="childMsg($event)"></app-child>
